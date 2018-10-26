@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class RivendellController : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class RivendellController : MonoBehaviour {
 
     //private bool _IsMordor = false;
     private bool _IsExternalClipPlaying = false;
+    private bool _IsOneRingFound = false;
     private float _CluePauseTime = 8.0f;
 
 
@@ -40,11 +42,9 @@ public class RivendellController : MonoBehaviour {
     {
         CameraVideoPlayer.loopPointReached -= CameraVideoPlayer_LoopPointReached;
         EventManager.OnVideoStartEvent -= EventManager_OnVideoStartEvent;
-
-
     }
 
-    public void VideoChanged(VideoItemModel curVideoItemModel)
+    public void OnRingPlaced(VideoItemModel curVideoItemModel)
     {
         if (curVideoItemModel.ClueObj != null)
         {
@@ -52,6 +52,7 @@ public class RivendellController : MonoBehaviour {
         }
         else
         {
+            _IsOneRingFound = curVideoItemModel.IsOneRing;
             EventManager.Instance.VideoStartEvent(curVideoItemModel);
         }
     }
@@ -66,9 +67,9 @@ public class RivendellController : MonoBehaviour {
         clueGameObj.SetActive(true);
         yield return new WaitForSeconds(_CluePauseTime);
         clueGameObj.SetActive(false);
-
-        //VideoClip videoClip = MainClueController.GetVideoById(curVideoItemModel.KeyIDStr);
-        MainClueController.GetVideoById(curVideoItemModel.KeyIDStr);
+        //determine the video clip to use
+        VideoClip videoClip = MainClueController.GetVideoById(curVideoItemModel.KeyIDStr);
+        curVideoItemModel.VideoSource = videoClip;
 
         EventManager.Instance.VideoStartEvent(curVideoItemModel);
     }
@@ -115,7 +116,13 @@ public class RivendellController : MonoBehaviour {
         {
             _IsExternalClipPlaying = false;
             EventManager.Instance.VideoEndEvent();
-            PlayRivendell();
+            if(_IsOneRingFound)
+            {
+                SceneManager.LoadScene(GlobalVars.Instance.EndScene);    
+            }else{
+                PlayRivendell();    
+            }
+
         }
     }
 

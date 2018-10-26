@@ -27,6 +27,8 @@ public class MainClueController : MonoBehaviour {
             //we don't have an item saved to local that matches this ID
             curVideo = SetPlayerPrefVideo(keyID);
         }
+        if (curVideo > VideoSources.Count - 1)
+            curVideo = VideoSources.Count - 1;
         //return the video that aligns with that index
         return VideoSources[curVideo];
     }

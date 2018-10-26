@@ -676,6 +676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef66b8f590a5a462287eb84fe517395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VideoSources:
+  - {fileID: 32900000, guid: c2057c893c85f4500bcb229c817a2eb7, type: 3}
+  - {fileID: 32900000, guid: 60838044706d640d0afa0a9a00f26966, type: 3}
+  - {fileID: 32900000, guid: 17973d2ea08d34884a40f640fe26115e, type: 3}
+  - {fileID: 32900000, guid: 9b747b4bed5f445e1ad18595e1711d04, type: 3}
 --- !u!4 &1250537339
 Transform:
   m_ObjectHideFlags: 0
@@ -793,6 +798,7 @@ MonoBehaviour:
   RivendellVideoClip: {fileID: 32900000, guid: dc278bf14255a422189e89bb90f33bf5, type: 3}
   MordorVideoClip: {fileID: 32900000, guid: 64f9fdadb16a841f2ad710e2f273167c, type: 3}
   ParticleSystemHolder: {fileID: 994433814}
+  MainClueController: {fileID: 1250537338}
   VideoItems:
   - {fileID: 1390624506}
   - {fileID: 1390624505}
@@ -836,14 +842,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyIDStr: 333
-  IsMainClue: 0
+  IsOneRing: 0
   VideoSource: {fileID: 32900000, guid: bc7185bda542346caaaf2374cecd761f, type: 3}
   LightRGB: {r: 0, g: 0.10399556, b: 1, a: 0}
   MethodToFire:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1390624501}
-        m_MethodName: VideoChanged
+        m_MethodName: OnRingPlaced
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1390624504}
@@ -868,14 +874,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyIDStr: 222
-  IsMainClue: 0
+  IsOneRing: 0
   VideoSource: {fileID: 32900000, guid: 71fee3b79dac448f692fa42aa3a2e9b3, type: 3}
   LightRGB: {r: 0.008892536, g: 1, b: 0, a: 0}
   MethodToFire:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1390624501}
-        m_MethodName: VideoChanged
+        m_MethodName: OnRingPlaced
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1390624505}
@@ -900,14 +906,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyIDStr: 111
-  IsMainClue: 0
+  IsOneRing: 1
   VideoSource: {fileID: 32900000, guid: 64f9fdadb16a841f2ad710e2f273167c, type: 3}
   LightRGB: {r: 1, g: 0, b: 0, a: 0}
   MethodToFire:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1390624501}
-        m_MethodName: VideoChanged
+        m_MethodName: OnRingPlaced
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1390624506}

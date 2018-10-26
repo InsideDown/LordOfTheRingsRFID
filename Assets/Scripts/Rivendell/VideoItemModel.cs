@@ -7,7 +7,7 @@ using UnityEngine.Video;
 public class VideoItemModel: MonoBehaviour  {
 
     public string KeyIDStr;
-    public bool IsMainClue = false;
+    public bool IsOneRing = false;
     public VideoClip VideoSource;
     public Color LightRGB;
     public UnityEvent MethodToFire;
