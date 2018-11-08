@@ -905,6 +905,19 @@ GameObject:
   - component: {fileID: 1390624507}
   - component: {fileID: 1390624509}
   - component: {fileID: 1390624510}
+  - component: {fileID: 1390624523}
+  - component: {fileID: 1390624522}
+  - component: {fileID: 1390624521}
+  - component: {fileID: 1390624520}
+  - component: {fileID: 1390624519}
+  - component: {fileID: 1390624518}
+  - component: {fileID: 1390624517}
+  - component: {fileID: 1390624516}
+  - component: {fileID: 1390624515}
+  - component: {fileID: 1390624514}
+  - component: {fileID: 1390624513}
+  - component: {fileID: 1390624512}
+  - component: {fileID: 1390624511}
   m_Layer: 0
   m_Name: RivendellController
   m_TagString: Untagged
@@ -1138,10 +1151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeyIDStr: 880006529289
+  KeyIDStr: 880006529317
   IsOneRing: 0
   IsClue: 0
-  VideoSource: {fileID: 32900000, guid: 49fd635bd65ee4bfdb2fbbee8e8da5af, type: 3}
+  VideoSource: {fileID: 32900000, guid: c351a4b7707a541d3ba4cd09c369dc8f, type: 3}
   LightRGB: {r: 0, g: 1, b: 0.9194927, a: 0}
   MethodToFire:
     m_PersistentCalls:
@@ -1171,7 +1184,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeyIDStr: 880006529311
+  KeyIDStr: 880007313623
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: 49fd635bd65ee4bfdb2fbbee8e8da5af, type: 3}
+  LightRGB: {r: 1, g: 0, b: 0.8455281, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624510}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880007313606
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: c351a4b7707a541d3ba4cd09c369dc8f, type: 3}
+  LightRGB: {r: 0.821043, g: 0, b: 1, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624511}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880007313682
   IsOneRing: 0
   IsClue: 0
   VideoSource: {fileID: 32900000, guid: 01d2a94f0e58a4fdcabbcee5fe4b6513, type: 3}
@@ -1183,7 +1262,370 @@ MonoBehaviour:
         m_MethodName: OnRingPlaced
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1390624510}
+          m_ObjectArgument: {fileID: 1390624512}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006529161
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: f779a83c1f0484dff9a4f5a068fbd039, type: 3}
+  LightRGB: {r: 0, g: 1, b: 0.63499, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624513}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006500366
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: 24dc52d37a5f6478793e02bb7b8b2cc2, type: 3}
+  LightRGB: {r: 0.26383924, g: 1, b: 0, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624514}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006529224
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: f779a83c1f0484dff9a4f5a068fbd039, type: 3}
+  LightRGB: {r: 0.83115256, g: 1, b: 0, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624515}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006514594
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: 24dc52d37a5f6478793e02bb7b8b2cc2, type: 3}
+  LightRGB: {r: 1, g: 0.8028251, b: 0, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624516}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880007313685
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: 3691f149c9a8f4820926d94a689cf224, type: 3}
+  LightRGB: {r: 1, g: 0.7349393, b: 0, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624517}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006500200
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: ec75bf3cbc7fe49c4b3853de59eb4abf, type: 3}
+  LightRGB: {r: 1, g: 0, b: 0.75927067, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624518}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006504126
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: 060f2004ec2524e4ab22108852b45568, type: 3}
+  LightRGB: {r: 0.78538465, g: 0, b: 1, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624519}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006529333
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: d420d4c7a6bef4dacbd87381f36dd694, type: 3}
+  LightRGB: {r: 0, g: 1, b: 0.89589477, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624520}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006504314
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: 8c667bd9dac80413cb298a2b2d61e41f, type: 3}
+  LightRGB: {r: 0.49527252, g: 1, b: 0, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624521}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006529125
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: d6e463f5485e24c228e86ac7277ad638, type: 3}
+  LightRGB: {r: 0.9427508, g: 1, b: 0, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624522}
+          m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ClueObj: {fileID: 0}
+--- !u!114 &1390624523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9495f7ed510e4e6083b76cd48a0a76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyIDStr: 880006529323
+  IsOneRing: 0
+  IsClue: 0
+  VideoSource: {fileID: 32900000, guid: 01d2a94f0e58a4fdcabbcee5fe4b6513, type: 3}
+  LightRGB: {r: 1, g: 0.47913203, b: 0, a: 0}
+  MethodToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390624501}
+        m_MethodName: OnRingPlaced
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1390624523}
           m_ObjectArgumentAssemblyTypeName: VideoItemModel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
