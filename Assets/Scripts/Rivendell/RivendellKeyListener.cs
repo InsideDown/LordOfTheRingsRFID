@@ -17,7 +17,7 @@ public class RivendellKeyListener : MonoBehaviour
     private List<VideoItemModel> VideoItemsList;
 
 
-    private void Awake()
+    private void Start()
     {
         VideoItemsList = new List<VideoItemModel>(RivendellController.VideoItems);
     }

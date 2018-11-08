@@ -4,6 +4,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class RivendellController : MonoBehaviour {
 
@@ -13,9 +14,10 @@ public class RivendellController : MonoBehaviour {
     public VideoClip MordorVideoClip;
     public GameObject ParticleSystemHolder;
     public MainClueController MainClueController;
-
-    public List<VideoItemModel> VideoItems = new List<VideoItemModel>();
     public List<GameObject> ClueGameObjects = new List<GameObject>();
+
+    [HideInInspector]
+    public List<VideoItemModel> VideoItems;
   
 
     //private bool _IsMordor = false;
@@ -29,6 +31,9 @@ public class RivendellController : MonoBehaviour {
         foreach(GameObject curClue in ClueGameObjects){
             curClue.SetActive(false);
         }
+
+        VideoItems = this.gameObject.GetComponents<VideoItemModel>().ToList();
+     
         PlayRivendell();
     }
 
@@ -46,9 +51,10 @@ public class RivendellController : MonoBehaviour {
 
     public void OnRingPlaced(VideoItemModel curVideoItemModel)
     {
+        EventManager.Instance.RingPlacedEvent(curVideoItemModel);
         if (curVideoItemModel.ClueObj != null)
         {
-            StartCoroutine(DisplayClue(curVideoItemModel));
+            StartCoroutine(DisplayClue(curVideoItemModel, curVideoItemModel.IsClue));
         }
         else
         {
@@ -57,19 +63,30 @@ public class RivendellController : MonoBehaviour {
         }
     }
 
-    IEnumerator DisplayClue(VideoItemModel curVideoItemModel)
+    IEnumerator DisplayClue(VideoItemModel curVideoItemModel, bool isClue)
     {
+        float animSpeed = 0.4f;
+ 
         GameObject clueGameObj = curVideoItemModel.ClueObj;
         CanvasGroup clueCanvas = clueGameObj.GetComponent<CanvasGroup>();
         if (clueCanvas != null)
             clueCanvas.alpha = 0;
-        clueCanvas.DOFade(1.0f, 0.3f);
+        clueCanvas.DOFade(1.0f, animSpeed);
+        clueGameObj.transform.DOLocalMoveY(-200f, 0f);
+        clueGameObj.transform.DOLocalRotate(new Vector3(0f,50f,0f), 0f);
+        clueGameObj.transform.DOLocalRotate(new Vector3(0f, 0f, 0f), animSpeed).SetDelay(0.1f);
+        clueGameObj.transform.DOLocalMoveY(0, animSpeed).SetDelay(0.1f).SetEase(Ease.OutBack);
+        DOTween.To(() => CameraVideoPlayer.targetCameraAlpha, x => CameraVideoPlayer.targetCameraAlpha = x, 0f, animSpeed);
         clueGameObj.SetActive(true);
         yield return new WaitForSeconds(_CluePauseTime);
         clueGameObj.SetActive(false);
-        //determine the video clip to use
-        VideoClip videoClip = MainClueController.GetVideoById(curVideoItemModel.KeyIDStr);
-        curVideoItemModel.VideoSource = videoClip;
+        //if we're a clue we get a random video clip instead of the assigned one
+        if (isClue)
+        {
+            //determine the video clip to use
+            VideoClip videoClip = MainClueController.GetVideoById(curVideoItemModel.KeyIDStr);
+            curVideoItemModel.VideoSource = videoClip;
+        }
 
         EventManager.Instance.VideoStartEvent(curVideoItemModel);
     }
@@ -87,11 +104,13 @@ public class RivendellController : MonoBehaviour {
             if (RivendellAudio.isPlaying)
                 RivendellAudio.Pause();
 
+            QualitySettings.vSyncCount = 2;
             ParticleSystemHolder.SetActive(false);
             _IsExternalClipPlaying = true;
             CameraVideoPlayer.clip = curVideoClip;
             CameraVideoPlayer.isLooping = false;
             CameraVideoPlayer.Play();
+            DOTween.To(() => CameraVideoPlayer.targetCameraAlpha, x => CameraVideoPlayer.targetCameraAlpha = x, 1f, 0.2f);
         }
     }
 
@@ -114,6 +133,7 @@ public class RivendellController : MonoBehaviour {
     {
         if(_IsExternalClipPlaying)
         {
+            QualitySettings.vSyncCount = 0;
             _IsExternalClipPlaying = false;
             EventManager.Instance.VideoEndEvent();
             if(_IsOneRingFound)

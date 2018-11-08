@@ -30,13 +30,15 @@ public class RivendellLights : MonoBehaviour {
 
     private void OnEnable()
     {
-        EventManager.OnVideoStartEvent += EventManager_OnVideoStartEvent;
+        EventManager.OnRingPlacedEvent += EventManager_OnVideoStartEvent;
+        //EventManager.OnVideoStartEvent += EventManager_OnVideoStartEvent;
         EventManager.OnVideoEndEvent += EventManager_OnVideoEndEvent;
     }
 
     private void OnDisable()
     {
-        EventManager.OnVideoStartEvent -= EventManager_OnVideoStartEvent;
+        EventManager.OnRingPlacedEvent -= EventManager_OnVideoStartEvent;
+        //EventManager.OnVideoStartEvent -= EventManager_OnVideoStartEvent;
         EventManager.OnVideoEndEvent -= EventManager_OnVideoEndEvent;
     }
 

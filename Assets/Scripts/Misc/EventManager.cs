@@ -14,6 +14,7 @@ public class EventManager : Singleton<EventManager> {
 
     public delegate void VideoStartAction(VideoItemModel curVideoItem);
     public static event VideoStartAction OnVideoStartEvent;
+    public static event VideoStartAction OnRingPlacedEvent;
 
     public delegate void KeyboardAction();
     public static event KeyboardAction OnRedTeamWin;
@@ -41,6 +42,12 @@ public class EventManager : Singleton<EventManager> {
     {
         if (OnVideoStartEvent != null)
             OnVideoStartEvent(curVideoItem);
+    }
+
+    public void RingPlacedEvent(VideoItemModel curVideoItem)
+    {
+        if (OnRingPlacedEvent != null)
+            OnRingPlacedEvent(curVideoItem);
     }
 
     public void VideoEndEvent()
